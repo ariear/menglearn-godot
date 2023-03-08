@@ -40,4 +40,4 @@ func _physics_process(delta):
 	elif (is_on_wall()) :
 		print('Njir kamu nabrak tembok')
 		
-	move_and_slide(movement, Vector2(0, -1))
+	move_and_slide(movement, Vector2(0, -1), false, 4, PI/4, false)

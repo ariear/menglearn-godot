@@ -46,8 +46,9 @@ script = ExtResource( 21 )
 [node name="Main Character" type="AnimatedSprite" parent="KinematicBody2D"]
 frames = SubResource( 1 )
 animation = "run"
-frame = 5
+frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -30, 0 )
 shape = SubResource( 2 )
