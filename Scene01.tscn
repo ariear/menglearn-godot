@@ -441,4 +441,4 @@ position = Vector2( 83, 451 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="Kotak" parent="." instance=ExtResource( 6 )]
-position = Vector2( 155, 303 )
+position = Vector2( 153, 240 )

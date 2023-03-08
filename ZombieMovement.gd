@@ -41,3 +41,10 @@ func _physics_process(delta):
 		print('Njir kamu nabrak tembok')
 		
 	move_and_slide(movement, Vector2(0, -1), false, 4, PI/4, false)
+	
+	if (get_slide_count() > 0):
+		for i in get_slide_count():
+			var benda = get_slide_collision(i)
+			if (benda.collider is RigidBody2D):
+				benda.collider.apply_central_impulse(movement)
+			
