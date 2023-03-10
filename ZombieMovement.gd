@@ -31,6 +31,11 @@ func _physics_process(delta):
 	elif (Input.is_action_pressed("Bawah")) :
 		movement.y += accel
 		movement.y = min(movement.y, max_speed)
+		if (is_on_floor()) :
+			$Cam.offset.y = clamp($Cam.offset.y + 10, 0, 100)
+	else:
+		if ($Cam.offset.y != 0) :
+			$Cam.offset.y = lerp($Cam.offset.y, 0, 0.1)
 		
 	if (Input.is_action_just_pressed("Lompat") and ( is_on_floor() or (jump_count < max_jump) ) ) :
 		movement.y = jump_force

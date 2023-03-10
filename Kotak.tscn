@@ -9,6 +9,7 @@ extents = Vector2( 30, 30 )
 [node name="Kotak" type="RigidBody2D"]
 gravity_scale = 2.0
 linear_damp = 4.0
+angular_damp = 4.56
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

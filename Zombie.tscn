@@ -22,6 +22,9 @@
 [ext_resource path="res://Sprite/ZombieOGA/Walk/__Zombie01_Walk_002.png" type="Texture" id=20]
 [ext_resource path="res://ZombieMovement.gd" type="Script" id=21]
 
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 190.0
+
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 2 ) ],
@@ -35,20 +38,14 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 190.0
-
-[node name="Node2D" type="Node2D"]
-
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="Zombie" type="KinematicBody2D"]
 script = ExtResource( 21 )
 
-[node name="Main Character" type="AnimatedSprite" parent="KinematicBody2D"]
-frames = SubResource( 1 )
-animation = "run"
-frame = 6
-playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -30, 0 )
 shape = SubResource( 2 )
+
+[node name="Main Character" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "run"
+playing = true
