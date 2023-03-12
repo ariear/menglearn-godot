@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Background/PARALLAX/layer_01_1920 x 1080.png" type="Texture" id=1]
 [ext_resource path="res://Zombie.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Kotak.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Background/PARALLAX/layer_02_1920 x 1080.png" type="Texture" id=7]
 [ext_resource path="res://Background/PARALLAX/layer_03_1920 x 1080.png" type="Texture" id=8]
+[ext_resource path="res://Platform1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Platfom2.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -478,3 +480,10 @@ motion_mirroring = Vector2( 1920, 0 )
 position = Vector2( 0, -300 )
 texture = ExtResource( 8 )
 centered = false
+
+[node name="Platform1" parent="." instance=ExtResource( 9 )]
+position = Vector2( 496, 236 )
+tujuan = Vector2( 300, 0 )
+
+[node name="Platfom2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 504, 139 )
