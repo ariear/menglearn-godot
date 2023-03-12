@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Background/PARALLAX/layer_01_1920 x 1080.png" type="Texture" id=1]
 [ext_resource path="res://Zombie.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Background/PARALLAX/layer_03_1920 x 1080.png" type="Texture" id=8]
 [ext_resource path="res://Platform1.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Platfom2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Brain.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -436,6 +437,8 @@ tile_data = PoolIntArray( 196589, 6, 0, 196590, 6, 1, 196591, 6, 1, 196592, 6, 1
 [node name="Zombie" parent="." instance=ExtResource( 2 )]
 position = Vector2( 83, 451 )
 scale = Vector2( 0.2, 0.2 )
+collision_layer = 4
+collision_mask = 3
 
 [node name="Cam" type="Camera2D" parent="Zombie"]
 current = true
@@ -487,3 +490,9 @@ tujuan = Vector2( 300, 0 )
 
 [node name="Platfom2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 504, 139 )
+
+[node name="Brain" parent="." instance=ExtResource( 11 )]
+position = Vector2( 227, 458 )
+
+[node name="Brain2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 149, 331 )
