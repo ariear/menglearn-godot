@@ -45,7 +45,8 @@ script = ExtResource( 21 )
 position = Vector2( -30, 0 )
 shape = SubResource( 2 )
 
-[node name="Main Character" type="AnimatedSprite" parent="."]
+[node name="MainCharacter" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "run"
+animation = "Idle"
+frame = 4
 playing = true

@@ -10,18 +10,24 @@ const max_jump = 2
 var jump_count = 0
 
 func _physics_process(delta):
-	
 	if (not is_on_floor()) :
 		movement.y += gravity
 	else :
 		movement.y = 0
 		jump_count = 0
 		movement.x = lerp(movement.x, 0, 0.1)
-
+	
+	if (Input.is_action_just_released("Maju") or Input.is_action_just_released("Mundur") ) :
+			$MainCharacter.play("Idle")
+		
 	if (Input.is_action_pressed("Maju")) :
+		$MainCharacter.play("run")
+		$MainCharacter.flip_h = false
 		movement.x += accel
 		movement.x = min(movement.x, max_speed)
 	elif (Input.is_action_pressed("Mundur")) :
+		$MainCharacter.play("run")
+		$MainCharacter.flip_h = true
 		movement.x -= accel
 		movement.x = max(movement.x, -max_speed)
 	

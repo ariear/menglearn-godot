@@ -79,7 +79,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0.07, 0.07 ), Vector2( 0.08, 0.08 ), Vector2( 0.07, 0.07 ) ]
 }
 
-[node name="Brain" type="Area2D"]
+[node name="Brain" type="Area2D" groups=["brains"]]
 collision_layer = 2
 collision_mask = 4
 script = ExtResource( 2 )

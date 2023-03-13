@@ -419,7 +419,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 9/z_index = 0
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" groups=["Scene1"]]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 5 )
@@ -491,8 +491,19 @@ tujuan = Vector2( 300, 0 )
 [node name="Platfom2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 504, 139 )
 
-[node name="Brain" parent="." instance=ExtResource( 11 )]
+[node name="Brains" type="Node2D" parent="." groups=["brains"]]
+
+[node name="Brain" parent="Brains" instance=ExtResource( 11 )]
 position = Vector2( 227, 458 )
 
-[node name="Brain2" parent="." instance=ExtResource( 11 )]
+[node name="Brain2" parent="Brains" instance=ExtResource( 11 )]
 position = Vector2( 149, 331 )
+
+[node name="Brain3" parent="Brains" instance=ExtResource( 11 )]
+position = Vector2( 610, 454 )
+
+[node name="Brain4" parent="Brains" instance=ExtResource( 11 )]
+position = Vector2( 775, 453 )
+
+[node name="Brain5" parent="Brains" instance=ExtResource( 11 )]
+position = Vector2( 953, 455 )
